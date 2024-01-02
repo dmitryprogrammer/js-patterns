@@ -13,35 +13,41 @@ class Facade {
     }
 
     buyProduct() {
-        this.#subSystem1.getContainer();
-        this.#subSystem2.deliverProduct();
-        this.#subSystem1.putInContainer();
-        this.#subSystem3.sale();
+        return `${this.#subSystem1.getContainer()} ${this.#subSystem2.deliverProduct()} ${this.#subSystem1.putInContainer()} ${this.#subSystem3.sale()}`
     }
 }
 
 class SubSystem1 {
     getContainer() {
-        console.log('Container is created');
+        const message = 'Container is created';
+        console.log(message);
+        return message;
     }
 
     putInContainer() {
-        console.log('Product is put in container');
+        const message = 'Product is put in container';
+        console.log(message);
+        return message;
     }
 }
 
 class SubSystem2 {
     deliverProduct() {
-        console.log('Product delivered to storehouse');
+        const message = 'Product delivered to storehouse';
+        console.log(message);
+        return message;
     }
 }
 
 class SubSystem3 {
     sale() {
-        console.log('Product is sold to customer');
+        const message = 'Product is sold to customer';
+        console.log(message);
+        return message;
     }
 }
 
 const product = new Facade(new SubSystem1(), new SubSystem2(), new SubSystem3());
 
 product.buyProduct();
+
