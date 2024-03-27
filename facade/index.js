@@ -1,7 +1,7 @@
 /**
  * Паттер "Фасад", представляет собой простую класс/функцию для обращения к одной и более подсистемам (функциям, классам) */
 
-class Facade {
+export class Facade {
     #subSystem1;
     #subSystem2;
     #subSystem3;
@@ -20,25 +20,33 @@ class Facade {
     }
 }
 
-class SubSystem1 {
+export class SubSystem1 {
     getContainer() {
-        console.log('Container is created');
+        const message = 'Container is created';
+        console.log(message);
+        return message;
     }
 
     putInContainer() {
-        console.log('Product is put in container');
+        const message = 'Product is put in container';
+        console.log(message);
+        return message;
     }
 }
 
-class SubSystem2 {
+export class SubSystem2 {
     deliverProduct() {
-        console.log('Product delivered to storehouse');
+        const message = 'Product delivered to storehouse';
+        console.log(message);
+        return message;
     }
 }
 
-class SubSystem3 {
+export class SubSystem3 {
     sale() {
-        console.log('Product is sold to customer');
+        const message = 'Product is sold to customer';
+        console.log(message);
+        return message;
     }
 }
 
