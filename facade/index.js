@@ -17,6 +17,8 @@ export class Facade {
         this.#subSystem2.deliverProduct();
         this.#subSystem1.putInContainer();
         this.#subSystem3.sale();
+
+        return `${this.#subSystem1.getContainer()}\n${this.#subSystem2.deliverProduct()}\n${this.#subSystem1.putInContainer()}\n${this.#subSystem3.sale()}`
     }
 }
 
